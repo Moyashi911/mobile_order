@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>モバイルオーダー</title>
+  <!-- <link type = "text/css" rel="stylesheet" href="../static/menu.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/menu.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<form>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">メニュー</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">注文ページ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin">注文管理ページ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-container">
+    <div class="menu-item" id="menu1"><img src="../static/img/dish1.jpg"></div>
+    <div class="menu-item">メニュー2</div>
+    <div class="menu-item">メニュー3</div>
+    <div class="menu-item">メニュー4</div>
+    <div class="menu-item">メニュー5</div>
+    <div class="menu-item">メニュー6</div>
+    <div class="menu-item">メニュー7</div>
+    <div class="menu-item">メニュー8</div>
+    <div class="menu-item">メニュー9</div>
+    <div class="menu-item">メニュー10</div>
+    <div class="menu-item">メニュー11</div>
+    <div class="menu-item">メニュー12</div>
+    <div class="menu-item">メニュー13</div>
+    <div class="menu-item">メニュー14</div>
+    <div class="menu-item">メニュー15</div>
+    <div class="menu-item">メニュー16</div>
+  </div>
+  <div class="page-container">
+    <div class="left-image">
+      <img src="../static/img/selectmenu.png" id="selectedmenu">
+    </div>
+    <form action="/" method="POST">
+      <h2 id="selected_menuname" name="selected_menuname"></h2>
+      <div class="menuoption">
+        <select id="menuoption" name="menuoption">
+          <option value="">オプションを選択してください</option>
+          <option value="normal">普通盛り</option>
+          <option value="large">大盛り</option>
+        </select>
+        <br>
+          <button type="submit" class="btn btn-success" id="orderbtn" method="post" onclick="">注文</button>
+      </div>
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='script/menu.js') }}"></script>
+  <!-- <script src="../static/menu.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .menu-item {
+    background-color: #f2f2f2;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .menu-item img{
+    width: 200px;
+    height: 200px;
+    transition: transform .6s ease;
+  }
+  .menu-item img:hover{
+    transform: scale(1.1);
+  }
+  .page-container {
+    margin: 10px;
+    margin-left: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .left-image {
+    height: 300px;
+    width: 300px;
+  }
+  
+  .left-image img {
+    height: 300px;
+    width: 300px;
+    height: auto;
+  }
+  .menuoption select{
+    margin-left: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .menuoption button{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
