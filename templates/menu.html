@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style/menu.css') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-<form>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">メニュー</a>
@@ -49,17 +48,20 @@
     <div class="left-image">
       <img src="../static/img/selectmenu.png" id="selectedmenu">
     </div>
-    <form action="/" method="POST">
-      <h2 id="selected_menuname" name="selected_menuname"></h2>
+    <form action="/orderpost" method="POST" name="orderform">
       <div class="menuoption">
+        <input type = "text" id = "menuname" name="menuname" placeholder="メニューを選択してください" value="" readonly>
+        <br>
         <select id="menuoption" name="menuoption">
-          <option value="">オプションを選択してください</option>
-          <option value="normal">普通盛り</option>
-          <option value="large">大盛り</option>
+          <option value="普通">普通盛り</option>
+          <option value="大盛">大盛り</option>
         </select>
         <br>
-          <button type="submit" class="btn btn-success" id="orderbtn" method="post" onclick="">注文</button>
+          <button type="submit" class="btn btn-success" id="orderbtn">注文</button>
       </div>
+    </form>
+    <form action="/admin">
+      <button type="submit">ページ遷移</button>
     </form>
   </div>
   <script src="{{ url_for('static', filename='script/menu.js') }}"></script>
