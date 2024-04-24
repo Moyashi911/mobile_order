@@ -55,4 +55,4 @@ def hello():
     return render_template("admin.html",info_list=info_list,list_len=list_len)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0',port="5000")
