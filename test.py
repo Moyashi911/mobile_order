@@ -9,7 +9,7 @@ firebase_app = firebase_admin.initialize_app(cred)
 order_num = 1
 db = firestore.client()
 
-docs = db.collection("2024-04-23").stream()
+docs = db.collection("2024-04-24").stream()
 menu_list=[]
 option_list=[]
 order_num_list = []
@@ -25,7 +25,6 @@ for j in range(len(menu_list)):
     for i in range(3):
         info.append(combine[i][j])
     info_list.append(info)
-# print(info_list)
-for i in range(len(menu_list)):
-        print(info_list[i][0],info_list[i][1],info_list[i][2])
-        print("--------")
+print(info_list)
+# for i in info_list:
+#     print(i)

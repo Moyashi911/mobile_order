@@ -10,6 +10,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+       ul.order_list {
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -42,10 +47,14 @@
         </div>
       </div>
     </nav>
-    {% for menu in menu_list %}
-    {% for option in option_list %}
-    {% for order_num in order_num_list %}
-    <li>{{menu}},{{option}},{{order_num}}</li>
-    {% endfor %}
+    <div name="order_list">
+      <ul class="list-group">
+        {% for info in info_list %}
+        <li class="list-group-item" name="order_list" style="font-size: 20px;">
+          {{ info[0] }}:{{ info[1] }}:{{ info[2] }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
 </html>

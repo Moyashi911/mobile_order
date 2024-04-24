@@ -37,13 +37,22 @@ def hello():
     menu_list=[]
     option_list=[]
     order_num_list = []
-    combine = [menu_list,option_list,order_num_list]
     for doc in docs:
         ref = doc.to_dict()
         menu_list.append(ref["menu"])
         option_list.append(ref["option"])
         order_num_list.append(ref["ordernumber"])
-    return render_template("admin.html",menu_list=menu_list,option_list=option_list,order_num_list=order_num_list)
+    combine = [menu_list,option_list,order_num_list]
+    info_list=[]
+    for j in range(len(menu_list)):
+        info = []
+        for i in range(3):
+            info.append(combine[i][j])
+        info_list.append(info)
+    list_len = len(menu_list)
+    for i in info_list:
+        print(i)
+    return render_template("admin.html",info_list=info_list,list_len=list_len)
 
 if __name__ == "__main__":
     app.run()
