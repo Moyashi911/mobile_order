@@ -46,4 +46,4 @@ def hello():
     return render_template("admin.html",menu_list=menu_list,option_list=option_list,order_num_list=order_num_list)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0' port="5000")
