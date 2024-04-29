@@ -1,0 +1,18 @@
+  
+li.list-group-item {
+    position: relative;
+    list-style-type: none!important;/*ポチ消す*/
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    background: #f1f1f1;
+    vertical-align: middle;
+    color: #505050;
+    border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+    font-size: 20px;
+  }
+  
+  li.list-group-item:before{ 
+    display:inline-block; 
+    vertical-align: middle;
+  }
