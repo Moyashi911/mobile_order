@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 420px;
+  position: fixed;
+}
+.menu-item {
+  background-color: #f2f2f2;
+  width: 200px;
+  height: 200px;
+}
+.menu-item img {
+  width: 400px;
+  height: 400px;
+  border: solid 1px orange;
+}
+.order_content {
+  padding-left: 30px;
+  border: solid 1px orange;
+}
