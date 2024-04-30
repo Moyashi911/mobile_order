@@ -1,14 +1,22 @@
 .content {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  height: 420px;
-  position: fixed;
+  height: 400px;
+  width: 100%;
+}
+.order_complete_text{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    background-color: orange;
+    width: 400px;
 }
 .menu-item {
   background-color: #f2f2f2;
   width: 200px;
   height: 200px;
+  margin-right: 200px;
 }
 .menu-item img {
   width: 400px;
@@ -16,6 +24,5 @@
   border: solid 1px orange;
 }
 .order_content {
-  padding-left: 30px;
   border: solid 1px orange;
 }
