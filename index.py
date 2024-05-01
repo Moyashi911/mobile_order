@@ -32,10 +32,11 @@ def orderpost():
     doc_number = doc.to_dict()
     menuname = request.form["menuname"]
     menuoption = request.form["menuoption"]
+    img = request.form["img_source"]
     now_order_num = doc_number["order_num"]
     doc_ref_num.set({"order_num": now_order_num+1})
     doc_ref.add({"menu": menuname, "option": menuoption, "ordernumber": now_order_num})
-    return render_template("order_complete.html",menuname=menuname,menuoption=menuoption,order_num=now_order_num)
+    return render_template("order_complete.html",menuname=menuname,menuoption=menuoption,order_num=now_order_num,img_source=img)
 @app.route("/admin")
 def hello():
     docs = doc_ref.stream()

@@ -44,11 +44,11 @@
     <div class="menu-item" id="menu15"><img src="../static/img/dish15.jpg"></div>
     <div class="menu-item" id="menu16"><img src="../static/img/dish16.jpg"></div>
   </div>
-  <div class="page-container">
-    <div class="left-image">
-      <img src="../static/img/selectmenu.png" id="selectedmenu">
-    </div>
     <form action="/orderpost" method="POST" name="orderform">
+      <div class="page-container">
+      <div class="left-image">
+        <img src="../static/img/selectmenu.png" id="selectedmenu_img">
+      </div>
       <div class="menuoption">
         <input type = "text" id = "menuname" name="menuname" placeholder="メニューを選択してください" value="" readonly>
         <br>
@@ -59,6 +59,8 @@
         <br>
           <button type="submit" class="btn btn-success" id="orderbtn">注文</button>
       </div>
+      </div>
+      <input type="hidden" id="img_source" name="img_source">
     </form>
   </div>
   <script src="{{ url_for('static', filename='script/menu.js') }}"></script>

@@ -40,22 +40,27 @@
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/admin"
-                >注文管理ページ</a
-              >
+                >注文管理ページ
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="order_complete_text"><h1>注文完了しました</h1></div>
+    <div class="order_complete">
+      <div class="order_complete_text"><h1>注文完了しました</h1></div>
+    </div>
     <div class="content">
-      <div class="menu-item"><img src="static/img/dish1.jpg" /></div>
+      <div class="menu-item"><img src={{img_source}} /></div>
       <div class="order_content">
-        <h1>注文完了しました</h1>
-        <h2>注文内容:{{menuname}}</h2>
-        <h2>オプション:{{menuoption}}</h2>
-        <h2>注文番号:{{order_num}}</h2>
+        <h2 style="text-decoration-line:underline;font-size: 50px;">{{menuname}} {{menuoption}}</h2>
+        <h1>注文番号</h1>
+        <br>
+        <h1 style="font-size: 150px;">{{order_num}}</h1>
       </div>
+    </div>
+    <div>
+      <h1 style="text-decoration-line: underline;text-align: center;">昼休み開始後早めに受け取ってください</h1>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

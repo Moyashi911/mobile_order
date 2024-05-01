@@ -4,13 +4,16 @@
   height: 400px;
   width: 100%;
 }
+.order_complete div{
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+  background-color: orange;
+  width: 800px;
+}
 .order_complete_text{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    text-align: center;
-    background-color: orange;
-    width: 400px;
+  margin: 0 auto;
+  font-size: 50px;
 }
 .menu-item {
   background-color: #f2f2f2;
@@ -25,4 +28,7 @@
 }
 .order_content {
   border: solid 1px orange;
+  width: 400px;
+  height: 400px;
+  text-align: center;
 }
